@@ -515,6 +515,7 @@ nav {
   margin-left: -50vw;
   margin-right: -50vw;
   padding: 6rem 0;
+  overflow-x: hidden;
 }
 
 .projects-container {
@@ -568,7 +569,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: visible;
+  overflow: hidden;
   perspective: 1500px;
   perspective-origin: center center;
   padding: 0.25rem 0;
@@ -618,7 +619,7 @@ nav {
   flex: 1;
   width: 100%;
   height: 100%;
-  overflow: visible;
+  overflow: hidden;
 }
 
 @media (max-width: 600px) {

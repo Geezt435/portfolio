@@ -100,7 +100,7 @@ function pastelGradient(hex: string) {
                       />
                       <circle
                         class="progress-ring-circle"
-                        stroke={"url(#gradient-" + skill.index + ")"}
+                        stroke={"url(#gradient-" + skill.name + ")"}
                         stroke-width="10"
                         fill="transparent"
                         r="80"
@@ -112,7 +112,7 @@ function pastelGradient(hex: string) {
                       />
                       <defs>
                         <linearGradient
-                          id={"gradient-" + skill.index}
+                          id={"gradient-" + skill.name}
                           gradientUnits="objectBoundingBox"
                           x1="0%"
                           y1="0%"
