@@ -6,7 +6,9 @@ import edgeoneAdapter from '@edgeone/astro';
 
 // https://astro.build/config
 export default defineConfig({
-  adapter: edgeoneAdapter(),
-  output: 'static',
+  output: 'server',
   integrations: [react()]
+  adapter: cloudflare({
+    mode: 'directory', // Add this line!
+  }),
 });
