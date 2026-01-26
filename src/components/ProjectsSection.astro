@@ -57,12 +57,11 @@ import { projectsConfig } from "../config/projects";
                   ))}
                 </div>
                 <div class="project-links">
-                  <a href={project.liveLink} class="project-link">
-                    Live <span style="font-size: 1.2rem;">→</span>
-                  </a>
-                  <a href={project.githubLink} class="project-link">
-                    GitHub <span style="font-size: 1.2rem;">→</span>
-                  </a>
+                  {project.buttons.map((button) => (
+                    <a href={button.url} class="project-link">
+                      {button.text} <span style="font-size: 1.2rem;">→</span>
+                    </a>
+                  ))}
                 </div>
               </div>
             ))

@@ -926,22 +926,6 @@ footer {
   text-decoration: underline;
 }
 
-.footer-github {
-  color: #000;
-  text-decoration: none;
-  padding-bottom: 1px;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-left: 1.5rem;
-  padding-right: 0.5rem;
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
 .footer-github:hover {
   color: #76cfc5;
   text-decoration: underline;

@@ -16,8 +16,11 @@ import { siteConfig } from "../config/site";
         ))}
       </p>
       <div class="hero-btn-row">
-        <a href="/posts" class="hero-btn">{siteConfig.hero.buttons.viewPosts}</a>
-        <a href="/contact" class="hero-btn-alt">{siteConfig.hero.buttons.contactMe}</a>
+        {siteConfig.hero.buttons.map((button) => (
+          <a href={button.url} class={button.text === "Contact Me" ? "hero-btn-alt" : "hero-btn"}>
+            {button.text}
+          </a>
+        ))}
       </div>
     </div>
     <div class="hero-right-col">
