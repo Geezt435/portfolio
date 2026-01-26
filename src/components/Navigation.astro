@@ -1,5 +1,4 @@
 ---
-import { Astro } from "astro";
 import { siteConfig } from "../config/site";
 
 const currentPath = Astro.url.pathname;
@@ -25,13 +24,6 @@ const currentPath = Astro.url.pathname;
         href="/contact"
         class={`menu-link ${currentPath.startsWith("/contact") ? "active" : ""}`}
         >{siteConfig.navigation.contact}</a
-      >
-    </li>
-    <li>
-      <a
-        href="/comments"
-        class={`menu-link ${currentPath.startsWith("/comments") ? "active" : ""}`}
-        >{siteConfig.navigation.comments}</a
       >
     </li>
   </ul>

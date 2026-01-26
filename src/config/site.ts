@@ -1,40 +1,44 @@
+import { title } from "framer-motion/client";
+
 // Site-wide configuration
 export const siteConfig = {
   // Site metadata
-  name: "Astro Blog",
-  title: "Astro Blog",
-  description: "A modern blog built with Astro",
+  name: "Main Portfolio",
+  title: "Main Portfolio",
+  owner: "Daud Elang Nugraha",
+  description: "Portfolio of Daud Elang Nugraha - Technician, Programmer, Former CTO",
   
   // Navigation
   navigation: {
     home: "Home",
     posts: "Posts",
     contact: "Contact",
-    comments: "Comments",
   },
   
   // Hero Section
   hero: {
-    prefix: "I am",
-    name: "Someone Name",
-    intro: "I am a web developer and blogger, passionate about sharing knowledge and building cool things with code.\nWelcome to my portfolio blog!",
-    avatar: "/image/20943608.jpeg",
+    prefix: "Technician | Programmer | Former Chief Technology Officer",
+    name: "Daud Elang Nugraha",
+    intro: "I am a tech specialist with a passion for development and practical solutions. Welcome to my portfolio!",
+    avatar: "/image/cleanavatar.png",
     buttons: {
       viewPosts: "View Posts",
       contactMe: "Contact Me",
     },
     socialLinks: [
-      { name: "Twitter", icon: "/svg/twitter.svg", url: "https://x.com/astrodotbuild" },
-      { name: "LinkedIn", icon: "/svg/linkedin.svg", url: "https://www.linkedin.com/company/astrodotbuild" },
-      { name: "Facebook", icon: "/svg/facebook.svg", url: "https://www.facebook.com/astrodotbuild" },
-      { name: "GitHub", icon: "/svg/github.svg", url: "https://github.com/tomcomtang/astro-cartoon-portfolio" },
+        { name: "Twitter", icon: "/svg/twitter.svg", url: "https://x.com/GeeztJ" },
+        { name: "LinkedIn", icon: "/svg/linkedin.svg", url: "https://www.linkedin.com/in/geeztjeez/" },
+        { name: "Google Skills", icon: "/svg/google_cloud-icon.svg", url: "https://www.skills.google/public_profiles/048afe87-ad72-4825-bc00-207beb32b7a7" },
+        { name: "Dicoding", icon: "/svg/dicoding.svg", url: "https://www.dicoding.com/users/geeztjeez/academies" },
+        { name: "Instagram", icon: "/svg/instagram.svg", url: "https://www.instagram.com/daudelangnugrahatelkom/" },
+        { name: "GitHub", icon: "/svg/github.svg", url: "https://github.com/Geezt435" },
     ],
   },
   
   // About Section
   about: {
     title: "About Me",
-    text: "Hi, I'm Someone, a passionate web developer and blogger. I love exploring new technologies and sharing knowledge with the community. On this blog, you'll find my thoughts on web development, tutorials, and project showcases. I hope my content can inspire others in their coding journey.",
+    text: "Greetings! I'm Daud Elang Nugraha, an experienced modder, web programmer and app developer, with a passion for technology and innovation. With a strong background in creating custom modifications and developing web applications, I thrive on turning ideas into reality. My journey in the tech world has equipped me with a diverse skill set, allowing me to tackle challenges with creativity and precision. Whether it's enhancing user experiences or building robust solutions, I'm dedicated to pushing the boundaries of what's possible in the digital realm.",
   },
   
   // Contact Page
@@ -44,13 +48,13 @@ export const siteConfig = {
     info: {
       email: {
         label: "Email",
-        value: "tom@example.com",
-        link: "mailto:tom@example.com",
+        value: "daudelangnugraha@gmail.com",
+        link: "mailto:daudelangnugraha@gmail.com",
       },
       phone: {
         label: "Phone",
-        value: "+1 (234) 567-890",
-        link: "tel:+1 (234) 567-890",
+        value: "+62 813-5140-1064",
+        link: "tel:+62 813-5140-1064",
       },
       location: {
         label: "Location",
@@ -60,10 +64,12 @@ export const siteConfig = {
     followMe: {
       title: "Follow Me",
       links: [
-        { name: "Twitter", icon: "/svg/twitter.svg", url: "https://x.com/astrodotbuild" },
-        { name: "LinkedIn", icon: "/svg/linkedin.svg", url: "https://www.linkedin.com/company/astrodotbuild" },
-        { name: "Facebook", icon: "/svg/facebook.svg", url: "https://www.facebook.com/astrodotbuild" },
-        { name: "GitHub", icon: "/svg/github.svg", url: "https://github.com/tomcomtang/astro-cartoon-portfolio" },
+        { name: "Twitter", icon: "/svg/twitter.svg", url: "https://x.com/GeeztJ" },
+        { name: "LinkedIn", icon: "/svg/linkedin.svg", url: "https://www.linkedin.com/in/geeztjeez/" },
+        { name: "Google Skills", icon: "/svg/google_cloud-icon.svg", url: "https://www.skills.google/public_profiles/048afe87-ad72-4825-bc00-207beb32b7a7" },
+        { name: "Dicoding", icon: "/svg/dicoding.svg", url: "https://www.dicoding.com/users/geeztjeez/academies" },
+        { name: "Instagram", icon: "/svg/instagram.svg", url: "https://www.instagram.com/daudelangnugrahatelkom/" },
+        { name: "GitHub", icon: "/svg/github.svg", url: "https://github.com/Geezt435" },
       ],
     },
     footerText: [
@@ -72,19 +78,38 @@ export const siteConfig = {
     ],
     messageButton: "💬 Leave a Message",
   },
+
+  proficiencies: {
+    title: "My Proficiencies",
+    skills: [
+      { name: "React", index: 1, percentage: 95, themeColor: "#61DAFB"},
+      { name: "JavaScript", index: 2, percentage: 90, themeColor: "#F7DF1E"},
+      { name: "TypeScript", index: 3, percentage: 88, themeColor: "#3178C6"},
+      { name: "Vue.js", index: 4, percentage: 85, themeColor: "#4FC08D"},
+      { name: "Node.js", index: 5, percentage: 92, themeColor: "#339933"},
+      { name: "Python", index: 6, percentage: 80, themeColor: "#306998"},
+      { name: "Django", index: 7, percentage: 75, themeColor: "#092E20"},
+      { name: "HTML5", index: 8, percentage: 98, themeColor: "#E34F26"},
+      { name: "CSS3", index: 9, percentage: 95, themeColor: "#1572B6"},
+      { name: "SQL", index: 10, percentage: 85, themeColor: "#4479A1"},
+      { name: "Git", index: 11, percentage: 95, themeColor: "#F05032"},
+      { name: "CSS", index: 12, percentage: 95, themeColor: "#264DE4"},
+      { name: "Flutter", index: 13, percentage: 70, themeColor: "#02569B"},
+      { name: "C++", index: 14, percentage: 65, themeColor: "#00599C"},
+      { name: "C#", index: 15, percentage: 90, themeColor: "#239120"},
+      { name: "Java", index: 16, percentage: 75, themeColor: "#007396"},
+      { name: "Kotlin", index: 17, percentage: 70, themeColor: "#0095D5"},
+      { name: "PHP", index: 18, percentage: 65, themeColor: "#777BB4"},
+    ],
+  },
   
   // Footer
   footer: {
-    copyright: "© 2025 Someone. All rights reserved.",
+    copyright: `© ${new Date().getFullYear()} Daud Elang Nugraha. All rights reserved.`,
     links: [
-      { text: "Privacy Policy", url: "#" },
-      { text: "Terms of Service", url: "#" },
-      { text: "Sitemap", url: "#" },
+      { text: "Other Bio", url: "https://geeztjee.bio.link/" },
+      { text: "My Github", url: "https://github.com/Geezt435" },
     ],
-    github: {
-      text: "Star this project on Github",
-      url: "https://github.com/tomcomtang/astro-cartoon-portfolio",
-    },
   },
   
   // Posts Page
@@ -92,23 +117,6 @@ export const siteConfig = {
     title: "Blog Posts",
     subtitle: "Explore our latest articles on web development, design, and technology",
     searchPlaceholder: "Search posts...",
-  },
-  
-  // Comments Page
-  comments: {
-    title: "Comments & Discussion",
-    subtitle: "Share your thoughts, questions, or suggestions here. Let's connect and discuss!",
-    guidelines: {
-      title: "Community Guidelines",
-      items: [
-        "Be respectful and constructive in your comments",
-        "No spam, self-promotion, or advertising allowed",
-        "No personal attacks, hate speech, or harassment",
-        "Stay on topic and keep discussions relevant",
-        "No inappropriate, offensive, or illegal content",
-        "Use clear, friendly, and inclusive language",
-      ],
-    },
   },
 };
 

@@ -839,30 +839,6 @@ nav {
   margin: 0;
 }
 
-.skill-name-1 {
-  color: #fff;
-}
-
-.skill-name-2 {
-  color: #fff;
-}
-
-.skill-name-3 {
-  color: #fff;
-}
-
-.skill-name-4 {
-  color: #fff;
-}
-
-.skill-name-5 {
-  color: #fff;
-}
-
-.skill-name-6 {
-  color: #fff;
-}
-
 .circular-progress {
   position: relative;
   display: flex;
@@ -872,6 +848,7 @@ nav {
 
 .progress-ring {
   transform: rotate(-90deg);
+  display: block;
 }
 
 .progress-ring-circle {
@@ -890,36 +867,11 @@ nav {
   transform: translate(-50%, -50%);
   font-size: 1.5rem;
   font-weight: 700;
-  text-align: center;
+  text-align: center;position: absolute;
 }
 
 .skill-percentage {
   display: inline-block;
-}
-
-/* Text colors for different skills */
-.skill-color-1 {
-  color: #76cfc5;
-}
-
-.skill-color-2 {
-  color: #ffb400;
-}
-
-.skill-color-3 {
-  color: #ec6664;
-}
-
-.skill-color-4 {
-  color: #ec6664;
-}
-
-.skill-color-5 {
-  color: #76cfc5;
-}
-
-.skill-color-6 {
-  color: #ffb400;
 }
 
 /* Footer */
@@ -961,11 +913,11 @@ footer {
   align-items: center;
   height: 100%;
   gap: 0.5rem;
-  color: #000;
+  color: #222;
 }
 
 .footer-link {
-  color: #000;
+  color: #444;
   text-decoration: none;
   margin: 0 0.5em;
 }
