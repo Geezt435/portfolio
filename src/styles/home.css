@@ -8,10 +8,12 @@
 
 :root {
   --border-radius: 4px;
-  --color-text: #333;
-  --color-primary: #7026b9;
-  --color-code-bg: #fff4db;
-  --color-code: #8a6534;
+  --color-text: #1a1a1a;
+  --color-primary: #0066cc;
+  --color-secondary: #003d7a;
+  --color-accent: #0099ff;
+  --color-code-bg: #f5f7fa;
+  --color-code: #2d3748;
   --font-sans: "MonaSansExpanded", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji";
@@ -43,7 +45,7 @@
 
 html,
 body {
-  background: #fafdff;
+  background: #ffffff;
   -webkit-text-size-adjust: 100%;
   font: sans-serif;
   font-size: var(--font-md);
@@ -57,7 +59,7 @@ body {
   word-wrap: break-word;
 }
 
-/* Global typography styles - matching reference site */
+/* Global typography styles */
 h1 {
   letter-spacing: -0.01em;
   line-height: var(--line-height-dense);
@@ -176,29 +178,26 @@ nav {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(250, 253, 255, 0.95);
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-  border-bottom: 1px solid rgba(118, 207, 197, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .site-name {
   font-weight: 700;
   font-size: 1.5rem;
-  letter-spacing: 0.05em;
-  color: #ec6664;
+  letter-spacing: -0.02em;
+  color: var(--color-primary);
   text-decoration: none;
   display: flex;
   align-items: center;
   height: 100%;
-  transition:
-    color 0.2s,
-    transform 0.2s;
+  transition: color 0.2s;
 }
 
 .site-name:hover {
-  color: #ffb400;
-  transform: scale(1.08);
+  color: var(--color-accent);
 }
 
 .nav-menu {
@@ -219,13 +218,11 @@ nav {
 }
 
 .menu-link {
-  font-weight: 700;
-  color: #d48a88;
+  font-weight: 600;
+  color: #4b5563;
   text-decoration: none;
-  font-size: 1.1rem;
-  transition:
-    color 0.2s,
-    transform 0.2s;
+  font-size: 1rem;
+  transition: color 0.2s;
   display: flex;
   align-items: center;
   height: 100%;
@@ -233,17 +230,17 @@ nav {
 }
 
 .menu-link:hover {
-  color: #ec6664;
-  transform: scale(1.08);
+  color: var(--color-primary);
 }
 
 .menu-link.active {
-  color: #ec6664;
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
 }
 
 /* Hero Section */
 .hero-section {
-  background: #fafdff;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -262,7 +259,7 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-  gap: 2rem;
+  gap: 3rem;
   width: 100%;
   align-items: center;
 }
@@ -272,7 +269,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   height: 100%;
 }
 
@@ -282,16 +279,17 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;
+  gap: 2rem;
   height: 100%;
 }
 
 .hero-normal-text {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   margin: 0;
-  color: #179b8e;
+  color: var(--color-accent);
   font-weight: 600;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .hero-big-text {
@@ -299,98 +297,81 @@ nav {
   font-weight: 800;
   margin: 0;
   line-height: 1.1;
-  background: linear-gradient(90deg, #76cfc5 0%, #ffb400 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-text);
   position: relative;
   z-index: 1;
 }
 
 .hero-intro-text {
-  font-size: 1.18rem;
+  font-size: 1.15rem;
   margin: 0;
-  color: #444;
-  line-height: 1.8;
+  color: #4b5563;
+  line-height: 1.7;
   font-weight: 400;
 }
 
 .hero-btn-row {
   display: flex;
-  gap: 1.5rem;
-  margin-top: 2.5rem;
+  gap: 1rem;
+  margin-top: 2rem;
   align-items: center;
 }
 
 .hero-btn {
-  padding: 0.9rem 2.2rem;
-  font-size: 1.15rem;
-  font-weight: 700;
-  border-radius: 2rem;
-  border: 2px solid #b0c4cc;
-  background: linear-gradient(90deg, #ffe9b2 0%, #76cfc5 100%);
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  background: var(--color-primary);
   color: #fff;
   cursor: pointer;
-  transition:
-    background 0.3s,
-    box-shadow 0.3s,
-    transform 0.2s;
+  transition: all 0.3s;
   text-decoration: none;
   display: inline-block;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 4px rgba(0, 102, 204, 0.2);
 }
 
 .hero-btn:hover {
-  background: linear-gradient(90deg, #76cfc5 0%, #ffe9b2 100%);
-  transform: scale(1.06);
-  box-shadow: 0 4px 16px rgba(94, 194, 182, 0.18);
+  background: var(--color-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
 }
 
 .hero-btn-alt {
-  padding: 0.9rem 2.2rem;
-  font-size: 1.15rem;
-  font-weight: 700;
-  border-radius: 2rem;
-  border: 2px solid #b0c4cc;
-  background: linear-gradient(90deg, #eaf6fa 0%, #c7e6f5 100%);
-  color: #179b8e;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 2px solid var(--color-primary);
+  background: transparent;
+  color: var(--color-primary);
   cursor: pointer;
-  transition:
-    background 0.3s,
-    box-shadow 0.3s,
-    transform 0.2s;
+  transition: all 0.3s;
   text-decoration: none;
   display: inline-block;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .hero-btn-alt:hover {
-  background: linear-gradient(90deg, #c7e6f5 0%, #eaf6fa 100%);
-  color: #179b8e;
-  border: 2px solid #b0c4cc;
-  transform: scale(1.06);
-  box-shadow: 0 4px 16px rgba(94, 194, 182, 0.1);
+  background: var(--color-primary);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 .hero-avatar {
   width: 280px;
   height: 280px;
-  border-radius: 50%;
+  border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-  margin-bottom: 1.2rem;
-  border: 4px solid #76cfc5;
-  transition:
-    box-shadow 0.3s,
-    border-color 0.3s,
-    transform 0.2s;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
+  border: none;
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
 .hero-avatar:hover {
-  transform: scale(1.06);
-  box-shadow: 0 8px 32px rgba(118, 207, 197, 0.18);
-  border-color: #ec6664;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
 }
 
 .social-list {
@@ -408,15 +389,15 @@ nav {
   justify-content: center;
   border-radius: 0;
   background: none;
-  color: #222;
-  font-size: 2.2rem;
+  color: #6b7280;
+  font-size: 2rem;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.2s, transform 0.2s;
   box-shadow: none;
 }
 
 .social-icon-btn:hover {
-  color: #ec6664;
+  color: var(--color-primary);
 }
 
 .social-icon-btn img {
@@ -424,20 +405,17 @@ nav {
   height: 36px;
   display: block;
   transition: transform 0.2s;
+  opacity: 0.7;
 }
 
 .social-icon-btn:hover img {
-  transform: scale(1.18);
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 /* About Me Section */
 .about-section {
-  background: linear-gradient(
-    135deg,
-    #6dd5c7 0%,
-    #5bc0ae 50%,
-    #4db09e 100%
-  );
+  background: linear-gradient(135deg, #003d7a 0%, #0066cc 100%);
   width: 100vw;
   min-width: 100vw;
   position: relative;
@@ -469,44 +447,20 @@ nav {
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 2rem;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.01em;
+  color: #fff;
 }
 
-.about-text {
-  font-size: 1.25rem;
+.about-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
   max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.9;
-  text-align: center;
-}
-
-.new-section {
-  background: linear-gradient(
-    135deg,
-    #f8fafc 0%,
-    #f1f5f9 50%,
-    #e2e8f0 100%
-  );
-  width: 100vw;
-  min-width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 4rem 0;
-  height: 460px;
-  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 /* Projects Section */
 .projects-section {
-  background: linear-gradient(
-    135deg,
-    #f0a868 0%,
-    #ecb993 50%,
-    #e8a87c 100%
-  );
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
   width: 100vw;
   min-width: 100vw;
   position: relative;
@@ -589,8 +543,8 @@ nav {
   width: 350px;
   height: 350px;
   object-fit: contain;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
   will-change: transform, opacity;
   transform-style: preserve-3d;
   backface-visibility: hidden;
@@ -630,7 +584,7 @@ nav {
   .coverflow-item {
     width: 250px;
     height: 250px;
-    border-radius: 20px;
+    border-radius: 8px;
   }
   .projects-container {
     padding: 0 1rem;
@@ -679,7 +633,7 @@ nav {
   font-weight: 800;
   margin-bottom: 0.25rem;
   margin-top: 0;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.01em;
   color: #fff;
 }
 
@@ -700,8 +654,6 @@ nav {
   margin: 0 auto;
 }
 
-/* Project content styles are now in .project-content-wrapper-inner above */
-
 .project-image-container {
   flex: 1 1 50%;
   display: flex;
@@ -715,9 +667,9 @@ nav {
   width: 100%;
   max-width: 400px;
   height: 250px;
-  border-radius: 12px;
+  border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .project-title {
@@ -729,7 +681,7 @@ nav {
 
 .project-description {
   font-size: 1rem;
-  color: #f0f0f0;
+  color: #e5e7eb;
   line-height: 1.6;
   margin-bottom: 0.25rem;
   min-height: 4.8em;
@@ -744,12 +696,13 @@ nav {
 }
 
 .technology-tag {
-  background: #edf2f7;
-  color: #4a5568;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
   padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
   font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .project-links {
@@ -768,21 +721,19 @@ nav {
   text-decoration: none;
   font-size: 1rem;
   font-weight: 600;
-  transition:
-    color 0.3s,
-    transform 0.3s;
+  transition: color 0.3s, transform 0.3s;
   padding: 0.5rem 0;
   cursor: pointer;
 }
 
 .project-link:hover {
-  color: #f0f0f0;
+  color: var(--color-accent);
   transform: translateX(10px);
 }
 
 /* Proficiency Section */
 .proficiency-section {
-  background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+  background: #f8fafc;
   width: 100vw;
   min-width: 100vw;
   position: relative;
@@ -801,7 +752,7 @@ nav {
 .proficiency-content {
   max-width: 1200px;
   margin: 0 auto;
-  color: #333;
+  color: var(--color-text);
   text-align: center;
   padding: 0 2rem;
   display: flex;
@@ -814,8 +765,8 @@ nav {
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 3rem;
-  letter-spacing: 0.01em;
-  color: #fff;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
 }
 
 .skills-grid {
@@ -834,10 +785,11 @@ nav {
 }
 
 .skill-name {
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 600;
   text-align: center;
   margin: 0;
+  color: var(--color-text);
 }
 
 .circular-progress {
@@ -868,7 +820,8 @@ nav {
   transform: translate(-50%, -50%);
   font-size: 1.5rem;
   font-weight: 700;
-  text-align: center;position: absolute;
+  text-align: center;
+  color: var(--color-text);
 }
 
 .skill-percentage {
@@ -878,11 +831,11 @@ nav {
 /* Footer */
 footer {
   height: 60px;
-  background: #fff;
+  background: #ffffff;
   width: 100vw;
   display: flex;
   align-items: center;
-  box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
   position: relative;
   left: 0;
   margin-top: 0;
@@ -914,23 +867,23 @@ footer {
   align-items: center;
   height: 100%;
   gap: 0.5rem;
-  color: #222;
+  color: #6b7280;
 }
 
 .footer-link {
-  color: #444;
+  color: #4b5563;
   text-decoration: none;
   margin: 0 0.5em;
+  transition: color 0.2s;
 }
 
 .footer-link:hover {
-  text-decoration: underline;
+  color: var(--color-primary);
 }
 
 .footer-github:hover {
-  color: #76cfc5;
-  text-decoration: underline;
-  transform: translateY(-2px);
+  color: var(--color-primary);
+  transform: translateY(-1px);
 }
 
 /* Responsive */
@@ -966,7 +919,7 @@ footer {
   }
 
   .skill-name {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .circular-progress-text {

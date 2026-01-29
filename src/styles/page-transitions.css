@@ -1,15 +1,16 @@
-/* Page Transition Animations */
+/* Page Transition Animations - Professional IT Firm Design */
+
 /* Initial state - hidden */
 .page-content {
   opacity: 0;
-  transform: scale(0.98);
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 /* Visible state - triggered by JavaScript */
 .page-content.visible {
   opacity: 1;
-  transform: scale(1);
+  transform: translateY(0);
 }
 
 /* Prevent flash of unstyled content */
@@ -20,8 +21,8 @@
 /* Hero section content animations */
 .hero-content-animate {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  transform: translateY(15px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .hero-content-animate.visible {
@@ -32,8 +33,8 @@
 /* Hero avatar animation */
 .hero-avatar-animate {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  transform: translateY(15px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .hero-avatar-animate.visible {
@@ -43,19 +44,19 @@
 
 /* Ensure hover effect works after animation */
 .hero-avatar-animate.visible:hover {
-  transform: translateY(0) scale(1.06);
+  transform: translateY(-5px);
 }
 
 /* Social icons with staggered delay */
 .social-icon-animate {
   opacity: 0;
-  transform: translateY(10px) scale(0.9);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .social-icon-animate.visible {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
 }
 
 /* Staggered delays for social icons */
@@ -64,22 +65,22 @@
 }
 
 .social-icon-animate:nth-child(2) {
-  transition-delay: 0.15s;
+  transition-delay: 0.1s;
 }
 
 .social-icon-animate:nth-child(3) {
-  transition-delay: 0.3s;
+  transition-delay: 0.2s;
 }
 
 .social-icon-animate:nth-child(4) {
-  transition-delay: 0.45s;
+  transition-delay: 0.3s;
 }
 
 /* Contact page animations */
 .contact-header-animate {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  transform: translateY(15px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .contact-header-animate.visible {
@@ -89,8 +90,8 @@
 
 .contact-card-animate {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.2s ease-out 0.2s, transform 1.2s ease-out 0.2s;
+  transform: translateY(15px);
+  transition: opacity 0.6s ease-out 0.15s, transform 0.6s ease-out 0.15s;
 }
 
 .contact-card-animate.visible {
@@ -99,14 +100,14 @@
 }
 
 .contact-card-animate:nth-child(2) {
-  transition-delay: 0.4s;
+  transition-delay: 0.3s;
 }
 
 /* Posts page animations */
 .posts-header-animate {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  transform: translateY(15px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .posts-header-animate.visible {
@@ -116,8 +117,8 @@
 
 .posts-content-animate {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.2s ease-out 0.2s, transform 1.2s ease-out 0.2s;
+  transform: translateY(15px);
+  transition: opacity 0.6s ease-out 0.15s, transform 0.6s ease-out 0.15s;
 }
 
 .posts-content-animate.visible {
@@ -128,8 +129,8 @@
 /* Comments page animations */
 .comments-header-animate {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  transform: translateY(15px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .comments-header-animate.visible {
@@ -139,8 +140,8 @@
 
 .comments-content-animate {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.2s ease-out 0.2s, transform 1.2s ease-out 0.2s;
+  transform: translateY(15px);
+  transition: opacity 0.6s ease-out 0.15s, transform 0.6s ease-out 0.15s;
 }
 
 .comments-content-animate.visible {
@@ -149,14 +150,14 @@
 }
 
 .comments-content-animate:nth-child(2) {
-  transition-delay: 0.4s;
+  transition-delay: 0.3s;
 }
 
 /* Post Detail page animations */
 .post-header-animate {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  transform: translateY(15px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .post-header-animate.visible {
@@ -166,12 +167,11 @@
 
 .post-content-animate {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.2s ease-out 0.2s, transform 1.2s ease-out 0.2s;
+  transform: translateY(15px);
+  transition: opacity 0.6s ease-out 0.15s, transform 0.6s ease-out 0.15s;
 }
 
 .post-content-animate.visible {
   opacity: 1;
   transform: translateY(0);
 }
-

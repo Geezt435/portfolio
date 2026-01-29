@@ -19,7 +19,8 @@ export const siteConfig = {
     prefix: "Technician | Programmer | Former Chief Technology Officer",
     name: "Daud Elang Nugraha",
     intro: "I am a tech specialist with a passion for development and practical solutions. Welcome to my portfolio!",
-    avatar: "/image/cleanavatar.png",
+    avatar: "/image/cleanavatar3.png",
+    avataralt: "/image/cleanavatar.png",
     buttons: [
       { text: "My Profile", url: "https://www.linkedin.com/in/geeztjeez/" },
       { text: "Contact Me", url: "/contact" },
